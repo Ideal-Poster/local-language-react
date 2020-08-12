@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useLoadScript,
   GoogleMap,
@@ -10,6 +10,11 @@ import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
 import Search from "./Search";
+import api from "../../api";
+
+import axios from "axios";
+
+const BASE_URL = "http://localhost:3000";
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -29,6 +34,14 @@ const options = {
 function Map() {
   const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
+
+  useEffect(() => {
+    const fetchMarkers = async () => {
+      const res = (await api.get("/locations")).data;
+      setMarkers(res);
+    };
+    fetchMarkers();
+  }, []);
 
   const onMapClick = React.useCallback((event) => {
     setMarkers((current) => [
@@ -51,7 +64,6 @@ function Map() {
 
   if (loadError) return "Error Loading Maps";
   if (!isLoaded) return "Loading Maps";
-
   return (
     <div>
       <Search />
@@ -65,7 +77,7 @@ function Map() {
       >
         {markers.map((marker) => (
           <Marker
-            key={marker.time.toISOString()}
+            key={marker.created_at}
             position={{ lat: marker.lat, lng: marker.lng }}
             onClick={() => setSelected(marker)}
           />
@@ -78,7 +90,7 @@ function Map() {
           >
             <div>
               <input type="text"></input>
-              <p>{formatRelative(selected.time, new Date())}</p>
+              <p>{selected.created_at}</p>
             </div>
           </InfoWindow>
         )}
