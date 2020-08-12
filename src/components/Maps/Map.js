@@ -6,15 +6,11 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import mapSytles from "./mapSytles";
-import { formatRelative } from "date-fns";
+// import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
 import Search from "./Search";
 import api from "../../api";
-
-import axios from "axios";
-
-const BASE_URL = "http://localhost:3000";
 
 const libraries = ["places"];
 const mapContainerStyle = {
