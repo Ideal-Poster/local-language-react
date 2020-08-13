@@ -13,6 +13,9 @@ cheese = User.create(name: 'cheese')
 chinese = Language.create(name: "Manderine")
 spanish = Language.create(name: "Spanish")
 
+UserLanguage.create(user: bob, language: chinese)
+UserLanguage.create(user: cheese, language: chinese)
+
 chinese_locations = [
   {lat: 40.72448553795292, lng: -73.99979419042967 },
   {lat: 40.734482035662616, lng: -73.9840383282451 },
@@ -29,6 +32,8 @@ location_4 = Location.create(name: "store3", lat: 40.745017275752154, lng: -73.9
 
 LanguageLocation.create(language: chinese, location: location_1)
 LanguageLocation.create(language: chinese, location: location_2)
+
+Visit.create(user: bob, location: location_1)
 
 
 

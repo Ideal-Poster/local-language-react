@@ -60,6 +60,7 @@ function Map() {
 
   if (loadError) return "Error Loading Maps";
   if (!isLoaded) return "Loading Maps";
+  
   return (
     <div>
       <Search />
@@ -85,6 +86,8 @@ function Map() {
             onCloseClick={() => setSelected(null)}
           >
             <div>
+              <h1>{selected.name}</h1>
+              <h1>{selected.description}</h1>
               <input type="text"></input>
               <p>{selected.created_at}</p>
             </div>

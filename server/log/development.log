@@ -1411,3 +1411,1357 @@ Processing by LocationsController#index as HTML
 Completed 200 OK in 66ms (Views: 29.2ms | ActiveRecord: 13.6ms | Allocations: 5966)
 
 
+Started GET "/locations" for ::1 at 2020-08-12 12:19:24 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 61ms (Views: 33.7ms | ActiveRecord: 11.6ms | Allocations: 5926)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 12:19:45 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 1305)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 14:19:31 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 1.8ms | Allocations: 1429)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 14:23:42 -0400
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (3.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 26.0ms | ActiveRecord: 12.8ms | Allocations: 5926)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 14:28:34 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 1305)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 14:29:08 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 1305)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 14:37:07 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1429)
+
+
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (142.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (136.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (438.9ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (297.3ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 19:08:03.179570"], ["updated_at", "2020-08-12 19:08:03.179570"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 19:08:03.187180"], ["updated_at", "2020-08-12 19:08:03.187180"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 19:08:03.301552"], ["updated_at", "2020-08-12 19:08:03.301552"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 19:08:03.307630"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 19:08:03.317640"], ["updated_at", "2020-08-12 19:08:03.317640"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 19:08:03.373946"], ["updated_at", "2020-08-12 19:08:03.373946"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 19:08:03.378396"], ["updated_at", "2020-08-12 19:08:03.378396"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguage Create (0.6ms)[0m  [1m[32mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Manderine"], ["created_at", "2020-08-12 19:08:03.398923"], ["updated_at", "2020-08-12 19:08:03.398923"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguage Create (0.4ms)[0m  [1m[32mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spanish"], ["created_at", "2020-08-12 19:08:03.403125"], ["updated_at", "2020-08-12 19:08:03.403125"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLanguage Create (1.7ms)[0m  [1m[32mINSERT INTO "user_languages" ("user_id", "language_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["language_id", 1], ["created_at", "2020-08-12 19:08:03.477457"], ["updated_at", "2020-08-12 19:08:03.477457"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLanguage Create (0.4ms)[0m  [1m[32mINSERT INTO "user_languages" ("user_id", "language_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["language_id", 1], ["created_at", "2020-08-12 19:08:03.483514"], ["updated_at", "2020-08-12 19:08:03.483514"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.8ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store"], ["lat", 40.72448553795292], ["lng", -73.99979419042967], ["created_at", "2020-08-12 19:08:03.496371"], ["updated_at", "2020-08-12 19:08:03.496371"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store1"], ["lat", 40.734482035662616], ["lng", -73.9840383282451], ["created_at", "2020-08-12 19:08:03.500726"], ["updated_at", "2020-08-12 19:08:03.500726"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store2"], ["lat", 40.74592765026943], ["lng", -73.99450967223925], ["created_at", "2020-08-12 19:08:03.504112"], ["updated_at", "2020-08-12 19:08:03.504112"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store3"], ["lat", 40.745017275752154], ["lng", -73.97665688903612], ["created_at", "2020-08-12 19:08:03.507651"], ["updated_at", "2020-08-12 19:08:03.507651"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguageLocation Create (1.1ms)[0m  [1m[32mINSERT INTO "language_locations" ("language_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language_id", 1], ["location_id", 1], ["created_at", "2020-08-12 19:08:03.527574"], ["updated_at", "2020-08-12 19:08:03.527574"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguageLocation Create (0.5ms)[0m  [1m[32mINSERT INTO "language_locations" ("language_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language_id", 1], ["location_id", 2], ["created_at", "2020-08-12 19:08:03.532672"], ["updated_at", "2020-08-12 19:08:03.532672"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/locations" for ::1 at 2020-08-12 15:08:18 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 7.8ms | Allocations: 5926)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 15:08:32 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 1.3ms | Allocations: 1305)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/locations" for ::1 at 2020-08-12 16:15:18 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 1.5ms | Allocations: 5282)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/locations" for ::1 at 2020-08-12 16:17:52 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 11.0ms | Allocations: 5324)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserLanguage Load (1.9ms)[0m  [1m[34mSELECT "user_languages".* FROM "user_languages" WHERE "user_languages"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLanguage Load (2.9ms)[0m  [1m[34mSELECT "languages".* FROM "languages" INNER JOIN "user_languages" ON "languages"."id" = "user_languages"."language_id" WHERE "user_languages"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/locations" for ::1 at 2020-08-12 16:29:34 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 1.7ms | Allocations: 5285)
+
+
+Started GET "/users" for ::1 at 2020-08-12 16:37:29 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-08-12 16:37:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/loactions" for ::1 at 2020-08-12 16:37:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/loactions"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/locations" for ::1 at 2020-08-12 16:37:43 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 1.6ms | Allocations: 6425)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 16:38:04 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1286)
+
+
+Started GET "/locations" for ::1 at 2020-08-12 16:38:18 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1286)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (143.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (143.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (412.9ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (292.7ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:41:38.390375"], ["updated_at", "2020-08-12 20:41:38.390375"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:41:38.399461"], ["updated_at", "2020-08-12 20:41:38.399461"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:41:38.515474"], ["updated_at", "2020-08-12 20:41:38.515474"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:41:38.522680"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:41:38.532090"], ["updated_at", "2020-08-12 20:41:38.532090"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (130.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (132.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (316.6ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (315.9ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:41:52.406469"], ["updated_at", "2020-08-12 20:41:52.406469"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:41:52.414956"], ["updated_at", "2020-08-12 20:41:52.414956"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:41:52.533169"], ["updated_at", "2020-08-12 20:41:52.533169"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:41:52.539236"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:41:52.550029"], ["updated_at", "2020-08-12 20:41:52.550029"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 20:41:52.603208"], ["updated_at", "2020-08-12 20:41:52.603208"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 20:41:52.607802"], ["updated_at", "2020-08-12 20:41:52.607802"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (132.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (129.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (404.3ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (296.7ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:42:27.234321"], ["updated_at", "2020-08-12 20:42:27.234321"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:42:27.242565"], ["updated_at", "2020-08-12 20:42:27.242565"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:42:27.352854"], ["updated_at", "2020-08-12 20:42:27.352854"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:42:27.358985"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:42:27.368661"], ["updated_at", "2020-08-12 20:42:27.368661"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 20:42:27.429378"], ["updated_at", "2020-08-12 20:42:27.429378"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 20:42:27.433988"], ["updated_at", "2020-08-12 20:42:27.433988"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (137.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (127.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (405.2ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (294.2ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:42:56.692950"], ["updated_at", "2020-08-12 20:42:56.692950"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:42:56.701080"], ["updated_at", "2020-08-12 20:42:56.701080"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:42:56.814524"], ["updated_at", "2020-08-12 20:42:56.814524"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:42:56.821149"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:42:56.831220"], ["updated_at", "2020-08-12 20:42:56.831220"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 20:42:56.885128"], ["updated_at", "2020-08-12 20:42:56.885128"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 20:42:56.889675"], ["updated_at", "2020-08-12 20:42:56.889675"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (131.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (130.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (317.8ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (315.0ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:43:13.715682"], ["updated_at", "2020-08-12 20:43:13.715682"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:43:13.723943"], ["updated_at", "2020-08-12 20:43:13.723943"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:43:13.843090"], ["updated_at", "2020-08-12 20:43:13.843090"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:43:13.849050"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:43:13.858260"], ["updated_at", "2020-08-12 20:43:13.858260"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 20:43:13.911416"], ["updated_at", "2020-08-12 20:43:13.911416"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 20:43:13.915641"], ["updated_at", "2020-08-12 20:43:13.915641"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (128.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_development"[0m
+  [1m[35m (131.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "local_language_api_test"[0m
+  [1m[35m (317.4ms)[0m  [1m[35mCREATE DATABASE "local_language_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (332.9ms)[0m  [1m[35mCREATE DATABASE "local_language_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:44:34.276747"], ["updated_at", "2020-08-12 20:44:34.276747"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:44:34.287411"], ["updated_at", "2020-08-12 20:44:34.287411"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "language_locations" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "language_locations" ("id" bigserial primary key, "language_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_language_id" ON "language_locations"  ("language_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_language_locations_on_location_id" ON "language_locations"  ("location_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "languages" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "languages" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "lat" float, "lng" float, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_languages" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "user_languages" ("id" bigserial primary key, "user_id" bigint NOT NULL, "language_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_language_id" ON "user_languages"  ("language_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_user_languages_on_user_id" ON "user_languages"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "native_language" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "visits" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "visits" ("id" bigserial primary key, "user_id" bigint NOT NULL, "location_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_location_id" ON "visits"  ("location_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_visits_on_user_id" ON "visits"  ("user_id")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_5098c72d23"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "language_locations" ADD CONSTRAINT "fk_rails_df1ffc9696"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_0be39eaff3"
+FOREIGN KEY ("language_id")
+  REFERENCES "languages" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_languages" ADD CONSTRAINT "fk_rails_db4f7502c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_6f9721672b"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "visits" ADD CONSTRAINT "fk_rails_09e5e7c20b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200811162717)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811161308),
+(20200811161453),
+(20200811161524),
+(20200811162244),
+(20200811162444);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-12 20:44:34.402879"], ["updated_at", "2020-08-12 20:44:34.402879"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-12 20:44:34.409043"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "80f324fb94baf1a06d2fd3dba90bf049ef2eb071"], ["created_at", "2020-08-12 20:44:34.419838"], ["updated_at", "2020-08-12 20:44:34.419838"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bob"], ["created_at", "2020-08-12 20:44:34.482403"], ["updated_at", "2020-08-12 20:44:34.482403"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "cheese"], ["created_at", "2020-08-12 20:44:34.486833"], ["updated_at", "2020-08-12 20:44:34.486833"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguage Create (0.7ms)[0m  [1m[32mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Manderine"], ["created_at", "2020-08-12 20:44:34.501433"], ["updated_at", "2020-08-12 20:44:34.501433"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguage Create (0.3ms)[0m  [1m[32mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spanish"], ["created_at", "2020-08-12 20:44:34.505860"], ["updated_at", "2020-08-12 20:44:34.505860"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLanguage Create (1.3ms)[0m  [1m[32mINSERT INTO "user_languages" ("user_id", "language_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["language_id", 1], ["created_at", "2020-08-12 20:44:34.523012"], ["updated_at", "2020-08-12 20:44:34.523012"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserLanguage Create (0.5ms)[0m  [1m[32mINSERT INTO "user_languages" ("user_id", "language_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["language_id", 1], ["created_at", "2020-08-12 20:44:34.527833"], ["updated_at", "2020-08-12 20:44:34.527833"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.8ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store"], ["lat", 40.72448553795292], ["lng", -73.99979419042967], ["created_at", "2020-08-12 20:44:34.543186"], ["updated_at", "2020-08-12 20:44:34.543186"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store1"], ["lat", 40.734482035662616], ["lng", -73.9840383282451], ["created_at", "2020-08-12 20:44:34.547996"], ["updated_at", "2020-08-12 20:44:34.547996"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store2"], ["lat", 40.74592765026943], ["lng", -73.99450967223925], ["created_at", "2020-08-12 20:44:34.551428"], ["updated_at", "2020-08-12 20:44:34.551428"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "store3"], ["lat", 40.745017275752154], ["lng", -73.97665688903612], ["created_at", "2020-08-12 20:44:34.554985"], ["updated_at", "2020-08-12 20:44:34.554985"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguageLocation Create (1.4ms)[0m  [1m[32mINSERT INTO "language_locations" ("language_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language_id", 1], ["location_id", 1], ["created_at", "2020-08-12 20:44:34.575359"], ["updated_at", "2020-08-12 20:44:34.575359"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguageLocation Create (0.5ms)[0m  [1m[32mINSERT INTO "language_locations" ("language_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["language_id", 1], ["location_id", 2], ["created_at", "2020-08-12 20:44:34.580491"], ["updated_at", "2020-08-12 20:44:34.580491"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVisit Create (1.1ms)[0m  [1m[32mINSERT INTO "visits" ("user_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["location_id", 1], ["created_at", "2020-08-12 20:44:34.601914"], ["updated_at", "2020-08-12 20:44:34.601914"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/locations" for ::1 at 2020-08-12 16:44:47 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 30.0ms | ActiveRecord: 7.9ms | Allocations: 6931)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mVisit Load (2.3ms)[0m  [1m[34mSELECT "visits".* FROM "visits" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
