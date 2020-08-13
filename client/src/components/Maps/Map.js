@@ -10,7 +10,7 @@ import mapSytles from "./mapSytles";
 
 import "@reach/combobox/styles.css";
 import Search from "./Search";
-import api from "../../api";
+import { getAllLocations, getLocationsByLanguage } from "../../requests";
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -31,9 +31,14 @@ function Map() {
   const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
 
+  const chineseLocations = async () => {
+    const locations = await getLocationsByLanguage();
+    setMarkers(locations);
+  };
+
   useEffect(() => {
     const fetchMarkers = async () => {
-      const res = (await api.get("/locations")).data;
+      const res = await getAllLocations();
       setMarkers(res);
     };
     fetchMarkers();
@@ -60,9 +65,12 @@ function Map() {
 
   if (loadError) return "Error Loading Maps";
   if (!isLoaded) return "Loading Maps";
-  
+
   return (
     <div>
+      <button onClick={chineseLocations}>Change language</button>
+      <button>User locations</button>
+
       <Search />
       <GoogleMap
         mapContainerStyle={mapContainerStyle}

@@ -6,6 +6,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "cd server && rails s",
+    "server-console": "cd server && rails c",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "repository": {
