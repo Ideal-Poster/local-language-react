@@ -43,13 +43,10 @@ export default [
     elementType: "geometry.fill",
     stylers: [
       {
-        color: "#0f9324",
+        color: "#000000",
       },
       {
         lightness: 20,
-      },
-      {
-        visibility: "on",
       },
     ],
   },
@@ -58,7 +55,7 @@ export default [
     elementType: "geometry.stroke",
     stylers: [
       {
-        color: "#00700a",
+        color: "#000000",
       },
       {
         lightness: 17,
@@ -66,20 +63,110 @@ export default [
       {
         weight: 1.2,
       },
+    ],
+  },
+  {
+    featureType: "administrative",
+    elementType: "labels",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.country",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "simplified",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.country",
+    elementType: "geometry",
+    stylers: [
+      {
+        visibility: "simplified",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.country",
+    elementType: "labels.text",
+    stylers: [
+      {
+        visibility: "simplified",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.province",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.locality",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "simplified",
+      },
+      {
+        saturation: "-100",
+      },
+      {
+        lightness: "30",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.neighborhood",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.neighborhood",
+    elementType: "geometry",
+    stylers: [
       {
         visibility: "on",
       },
     ],
   },
   {
-    featureType: "administrative",
-    elementType: "labels.text",
+    featureType: "administrative.neighborhood",
+    elementType: "geometry.stroke",
     stylers: [
       {
-        color: "#93c991",
-      },
-      {
         visibility: "simplified",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.neighborhood",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "off",
       },
     ],
   },
@@ -88,10 +175,13 @@ export default [
     elementType: "all",
     stylers: [
       {
-        visibility: "on",
+        visibility: "simplified",
       },
       {
-        color: "#000000",
+        gamma: "0.00",
+      },
+      {
+        lightness: "74",
       },
     ],
   },
@@ -105,65 +195,23 @@ export default [
       {
         lightness: 20,
       },
-      {
-        visibility: "on",
-      },
     ],
   },
   {
-    featureType: "landscape.natural",
-    elementType: "geometry.fill",
+    featureType: "landscape.man_made",
+    elementType: "all",
     stylers: [
       {
-        visibility: "on",
-      },
-      {
-        color: "#000000",
+        lightness: "3",
       },
     ],
   },
   {
-    featureType: "landscape.natural.landcover",
-    elementType: "geometry",
+    featureType: "poi",
+    elementType: "all",
     stylers: [
       {
         visibility: "off",
-      },
-    ],
-  },
-  {
-    featureType: "landscape.natural.landcover",
-    elementType: "geometry.stroke",
-    stylers: [
-      {
-        visibility: "on",
-      },
-      {
-        color: "#000000",
-      },
-    ],
-  },
-  {
-    featureType: "landscape.natural.terrain",
-    elementType: "geometry.fill",
-    stylers: [
-      {
-        visibility: "on",
-      },
-      {
-        color: "#000000",
-      },
-    ],
-  },
-  {
-    featureType: "landscape.natural.terrain",
-    elementType: "geometry.stroke",
-    stylers: [
-      {
-        visibility: "on",
-      },
-      {
-        color: "#000000",
       },
     ],
   },
@@ -180,11 +228,11 @@ export default [
     ],
   },
   {
-    featureType: "poi",
-    elementType: "labels.icon",
+    featureType: "road",
+    elementType: "geometry",
     stylers: [
       {
-        visibility: "on",
+        visibility: "simplified",
       },
     ],
   },
@@ -197,9 +245,6 @@ export default [
       },
       {
         lightness: 17,
-      },
-      {
-        visibility: "off",
       },
     ],
   },
@@ -215,9 +260,6 @@ export default [
       },
       {
         weight: 0.2,
-      },
-      {
-        visibility: "off",
       },
     ],
   },

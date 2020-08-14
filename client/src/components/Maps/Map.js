@@ -16,6 +16,8 @@ const libraries = ["places"];
 const mapContainerStyle = {
   width: "100vw",
   height: "100vh",
+  // position: "absolute",
+  // right: 0
 };
 const center = {
   lat: 40.712776,
@@ -29,6 +31,7 @@ const options = {
 
 function Map() {
   const [markers, setMarkers] = React.useState([]);
+  const [newMarker, setNewMarker] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
 
   const chineseLocations = async () => {
@@ -39,20 +42,19 @@ function Map() {
   useEffect(() => {
     const fetchMarkers = async () => {
       const res = await getAllLocations();
+      console.log(res);
       setMarkers(res);
     };
     fetchMarkers();
   }, []);
 
   const onMapClick = React.useCallback((event) => {
-    setMarkers((current) => [
-      ...current,
-      {
-        lat: event.latLng.lat(),
-        lng: event.latLng.lng(),
-        time: new Date(),
-      },
-    ]);
+    setNewMarker({
+      lat: event.latLng.lat(),
+      lng: event.latLng.lng(),
+      time: new Date(),
+    });
+    setSelected(null);
   }, []);
 
   const mapRef = React.useRef();
@@ -68,10 +70,7 @@ function Map() {
 
   return (
     <div>
-      <button onClick={chineseLocations}>Change language</button>
-      <button>User locations</button>
-
-      <Search />
+      {/* <Search /> */}
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={13}
@@ -88,15 +87,29 @@ function Map() {
           />
         ))}
 
+        {newMarker && (
+          <Marker
+            key={newMarker.created_at}
+            position={{ lat: newMarker.lat, lng: newMarker.lng }}
+            draggable={true}
+            onDragEnd={onMapClick}
+            icon={{
+              url: `/stencil.png`,
+              origin: new window.google.maps.Point(0, 0),
+              scaledSize: new window.google.maps.Size(120, 50),
+            }}
+            // onClick={() => setSelected(new)}
+          />
+        )}
+
         {selected && (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => setSelected(null)}
           >
             <div>
-              <h1>{selected.name}</h1>
-              <h1>{selected.description}</h1>
-              <input type="text"></input>
+              <p>{selected.name}</p>
+              <p>{selected.description}</p>
               <p>{selected.created_at}</p>
             </div>
           </InfoWindow>
