@@ -8,10 +8,6 @@ const api = axios.create({
   // }
 });
 
-export const getAllLocations = async () => {
-  return (await api.get("/locations")).data;
-};
-
 export const getLocationsByLanguage = async (language) => {
   return (await api.get("/locations_by_language")).data;
 };

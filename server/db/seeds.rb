@@ -8,13 +8,13 @@
 
 
 bob =  User.create(name: 'bob')
-cheese = User.create(name: 'cheese')
+jivanta = User.create(name: 'jivant')
 
 chinese = Language.create(name: "Manderine")
 spanish = Language.create(name: "Spanish")
 
 UserLanguage.create(user: bob, language: chinese)
-UserLanguage.create(user: cheese, language: chinese)
+UserLanguage.create(user: jivanta, language: chinese)
 
 chinese_locations = [
   {lat: 40.72448553795292, lng: -73.99979419042967 },
@@ -28,12 +28,29 @@ location_1 = Location.create(name: "store", lat: 40.72448553795292, lng: -73.999
 location_2 = Location.create(name: "store1", lat: 40.734482035662616, lng: -73.9840383282451)
 location_3 = Location.create(name: "store2", lat: 40.74592765026943, lng: -73.99450967223925)
 location_4 = Location.create(name: "store3", lat: 40.745017275752154, lng: -73.97665688903612)
+location_5 = Location.create(name: "store4", lat: 40.754250496596796, lng: -73.9727086773662)
 # Location.create(name: "store4", lat: chinese_locations[4][:lat], lng: chinese_locations[4][:lng])
 
 LanguageLocation.create(language: chinese, location: location_1)
 LanguageLocation.create(language: chinese, location: location_2)
+LanguageLocation.create(language: chinese, location: location_3)
+LanguageLocation.create(language: chinese, location: location_4)
+LanguageLocation.create(language: spanish, location: location_1)
+LanguageLocation.create(language: spanish, location: location_5)
+
 
 Visit.create(user: bob, location: location_1)
+Visit.create(user: bob, location: location_2)
+Visit.create(user: bob, location: location_4)
+Visit.create(user: bob, location: location_4)
+Visit.create(user: bob, location: location_4)
+
+
+
+Visit.create(user: jivanta, location: location_1)
+Visit.create(user: jivanta, location: location_3)
+Visit.create(user: jivanta, location: location_5)
+
 
 
 

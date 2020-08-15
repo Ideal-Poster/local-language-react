@@ -5,46 +5,26 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import mapSytles from "./mapSytles";
 // import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
 import Search from "./Search";
-import { getAllLocations, getLocationsByLanguage } from "../../requests";
-
-const libraries = ["places"];
-const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
-  // position: "absolute",
-  // right: 0
-};
-const center = {
-  lat: 40.712776,
-  lng: -74.005974,
-};
-const options = {
-  styles: mapSytles,
-  disableDefaultUI: true,
-  zoomControl: true,
-};
+import { getLocationsByLanguage, getVisitedLocations } from "../../requests";
+import { libraries, mapContainerStyle, center, options } from "./MapConfig";
 
 function Map() {
   const [markers, setMarkers] = React.useState([]);
+  const [visitedMarkers, setVisitedMarkers] = React.useState([]);
   const [newMarker, setNewMarker] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
 
-  const chineseLocations = async () => {
-    const locations = await getLocationsByLanguage();
-    setMarkers(locations);
-  };
-
   useEffect(() => {
     const fetchMarkers = async () => {
-      const res = await getAllLocations();
+      const res = await getLocationsByLanguage();
       console.log(res);
       setMarkers(res);
     };
+
     fetchMarkers();
   }, []);
 
@@ -71,6 +51,7 @@ function Map() {
   return (
     <div>
       {/* <Search /> */}
+      <button onClick={() => console.log(selected.description)}>Hello</button>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={13}
@@ -79,13 +60,31 @@ function Map() {
         onClick={onMapClick}
         onLoad={onMapLoad}
       >
-        {markers.map((marker) => (
-          <Marker
-            key={marker.created_at}
-            position={{ lat: marker.lat, lng: marker.lng }}
-            onClick={() => setSelected(marker)}
-          />
-        ))}
+        {markers.map((marker) =>
+          marker.user_visits.length > 0 ? (
+            <Marker
+              key={marker.created_at}
+              position={{ lat: marker.lat, lng: marker.lng }}
+              onClick={() => setSelected(marker)}
+              icon={{
+                url: `/Asset-8.svg`,
+                origin: new window.google.maps.Point(0, 0),
+                scaledSize: new window.google.maps.Size(25, 45),
+              }}
+            />
+          ) : (
+            <Marker
+              key={marker.created_at}
+              position={{ lat: marker.lat, lng: marker.lng }}
+              onClick={() => setSelected(marker)}
+              icon={{
+                url: `/Asset-3.svg`,
+                origin: new window.google.maps.Point(0, 0),
+                scaledSize: new window.google.maps.Size(25, 45),
+              }}
+            />
+          )
+        )}
 
         {newMarker && (
           <Marker
@@ -94,9 +93,9 @@ function Map() {
             draggable={true}
             onDragEnd={onMapClick}
             icon={{
-              url: `/stencil.png`,
+              url: `/Asset-15.svg`,
               origin: new window.google.maps.Point(0, 0),
-              scaledSize: new window.google.maps.Size(120, 50),
+              scaledSize: new window.google.maps.Size(25, 45),
             }}
             // onClick={() => setSelected(new)}
           />
@@ -111,6 +110,11 @@ function Map() {
               <p>{selected.name}</p>
               <p>{selected.description}</p>
               <p>{selected.created_at}</p>
+              {selected.user_visits.length > 0 && (
+                <p>
+                  you have been here {selected.user_visits.length} time before
+                </p>
+              )}
             </div>
           </InfoWindow>
         )}
