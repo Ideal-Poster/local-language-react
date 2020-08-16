@@ -7,7 +7,18 @@ class LocationsController < ApplicationController
   end
 
   def create
-    # Location.create()
+    language = User.first.languages.first
+    location = Location.new(location_params)
+    user = User.first
+
+    if location.save
+      LanguageLocation.create(language: language, location: location)
+      visit = Visit.create(user: user, location: location)
+      location.user_visits = [visit]
+      render json: location, include: :user_visits
+    else
+      render json: {}
+    end
   end
 
   def filter_by_language
@@ -35,20 +46,9 @@ class LocationsController < ApplicationController
   def filter_by_friends
   end
 
-  # def user_locations
-  #   # User.first.locations
-  #   locations = Locations.all
-  #   visits = User.first.visits
-  #   updated_locations = locations.map do |location|
-  #     if visits.any? { |visit| visit[:location_id] == location.id }
-  #       location.user_visits = visits.filter { |visit| visit.location_id == location[:id] }
-  #       location
-  #     else
-  #       location.user_visits = []
-  #       location
-  #     end
-  #   end
-  #   render json: locations, include: :user_visits
-  # end
+  private
 
+  def location_params
+    params.require(:location).permit(:name, :lat, :lng, :description)
+  end
 end

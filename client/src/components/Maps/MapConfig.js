@@ -3,8 +3,8 @@ import mapSytles from "./mapSytles";
 export const libraries = ["places"];
 export const mapContainerStyle = {
   width: "100vw",
-  height: "90vh",
-  // position: "absolute",
+  height: "100vh",
+  position: "absolute",
   // right: 0
 };
 export const center = {

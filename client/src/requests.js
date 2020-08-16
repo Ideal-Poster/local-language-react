@@ -8,6 +8,20 @@ const api = axios.create({
   // }
 });
 
-export const getLocationsByLanguage = async (language) => {
-  return (await api.get("/locations_by_language")).data;
+export const getLocationsByLanguage = (callback) => {
+  api
+    .get("/locations_by_language")
+    .then((res) => {
+      if (res.statusText == "OK") callback(res.data);
+    })
+    .catch(console.log);
+};
+
+export const postLocation = (object, callback) => {
+  api
+    .post("/locations", object)
+    .then((res) => {
+      callback((current) => [...current, res.data]);
+    })
+    .catch(console.log);
 };

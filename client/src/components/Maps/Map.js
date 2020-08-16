@@ -9,22 +9,29 @@ import {
 
 import "@reach/combobox/styles.css";
 import Search from "./Search";
-import { getLocationsByLanguage, getVisitedLocations } from "../../requests";
-import { libraries, mapContainerStyle, center, options } from "./MapConfig";
+import {
+  getLocationsByLanguage,
+  getVisitedLocations,
+  postLocation,
+} from "../../requests";
+import { libraries, mapContainerStyle, center, options } from "./mapConfig";
+import Pin from "./Pin";
+
+const initialState = {
+  name: "",
+  description: "",
+};
 
 function Map() {
   const [markers, setMarkers] = React.useState([]);
-  const [visitedMarkers, setVisitedMarkers] = React.useState([]);
   const [newMarker, setNewMarker] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
+  const [formData, setFormData] = React.useState(initialState);
 
   useEffect(() => {
-    const fetchMarkers = async () => {
-      const res = await getLocationsByLanguage();
-      console.log(res);
-      setMarkers(res);
+    const fetchMarkers = () => {
+      getLocationsByLanguage(setMarkers);
     };
-
     fetchMarkers();
   }, []);
 
@@ -33,9 +40,25 @@ function Map() {
       lat: event.latLng.lat(),
       lng: event.latLng.lng(),
       time: new Date(),
+      user_visits: [],
     });
     setSelected(null);
   }, []);
+
+  const submitLocation = async (e) => {
+    e.preventDefault();
+    await postLocation({ ...newMarker, ...formData }, setMarkers);
+    setNewMarker(null);
+    setSelected(null);
+  };
+
+  const handleChange = (e) => {
+    setFormData((current) => {
+      const object = current;
+      object[e.target.name] = e.target.value;
+      return object;
+    });
+  };
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => (mapRef.current = map), []);
@@ -51,7 +74,6 @@ function Map() {
   return (
     <div>
       {/* <Search /> */}
-      <button onClick={() => console.log(selected.description)}>Hello</button>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={13}
@@ -62,42 +84,30 @@ function Map() {
       >
         {markers.map((marker) =>
           marker.user_visits.length > 0 ? (
-            <Marker
-              key={marker.created_at}
-              position={{ lat: marker.lat, lng: marker.lng }}
-              onClick={() => setSelected(marker)}
-              icon={{
-                url: `/Asset-8.svg`,
-                origin: new window.google.maps.Point(0, 0),
-                scaledSize: new window.google.maps.Size(25, 45),
-              }}
+            <Pin
+              key={marker.id}
+              imageUrl={"/Asset-8.svg"}
+              marker={marker}
+              setSelected={setSelected}
             />
           ) : (
-            <Marker
-              key={marker.created_at}
-              position={{ lat: marker.lat, lng: marker.lng }}
-              onClick={() => setSelected(marker)}
-              icon={{
-                url: `/Asset-3.svg`,
-                origin: new window.google.maps.Point(0, 0),
-                scaledSize: new window.google.maps.Size(25, 45),
-              }}
+            <Pin
+              key={marker.id}
+              imageUrl={"/Asset-3.svg"}
+              marker={marker}
+              setSelected={setSelected}
             />
           )
         )}
 
         {newMarker && (
-          <Marker
-            key={newMarker.created_at}
-            position={{ lat: newMarker.lat, lng: newMarker.lng }}
-            draggable={true}
+          <Pin
+            key={newMarker.id}
+            imageUrl={"/Asset-15.svg"}
+            marker={newMarker}
+            setSelected={setSelected}
             onDragEnd={onMapClick}
-            icon={{
-              url: `/Asset-15.svg`,
-              origin: new window.google.maps.Point(0, 0),
-              scaledSize: new window.google.maps.Size(25, 45),
-            }}
-            // onClick={() => setSelected(new)}
+            newMarker={true}
           />
         )}
 
@@ -106,16 +116,40 @@ function Map() {
             position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => setSelected(null)}
           >
-            <div>
-              <p>{selected.name}</p>
-              <p>{selected.description}</p>
-              <p>{selected.created_at}</p>
-              {selected.user_visits.length > 0 && (
-                <p>
-                  you have been here {selected.user_visits.length} time before
-                </p>
-              )}
-            </div>
+            {selected.id ? (
+              <>
+                <p>{selected.name}</p>
+                <p>{selected.description}</p>
+                <p>{selected.created_at}</p>
+                {selected.user_visits.length > 0 && (
+                  <p>
+                    you have been here {selected.user_visits.length} time before
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                <form>
+                  <label htmlFor="name">
+                    Name <br />
+                    <input onChange={handleChange} type="text" name="name" />
+                  </label>
+                  <br />
+                  <label htmlFor="description">
+                    Description <br />
+                    <input
+                      onChange={handleChange}
+                      type="text"
+                      name="description"
+                    />
+                  </label>
+                  <br />
+                  <button onClick={submitLocation} type="submit" form="a-form">
+                    Submit
+                  </button>
+                </form>
+              </>
+            )}
           </InfoWindow>
         )}
       </GoogleMap>
