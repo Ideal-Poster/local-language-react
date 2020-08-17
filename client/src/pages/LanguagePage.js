@@ -1,17 +1,13 @@
 import React from "react";
-import Map from "../components/Maps/Map";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
 
 function LanguagePage() {
   return (
     <div>
-      <Row>
-        <Col>
-          <p>ehllo</p>
-        </Col>
-        <Map />
-      </Row>
+      <h2>Stats</h2>
+      <Link to="/map">
+        <button>Map</button>
+      </Link>
     </div>
   );
 }

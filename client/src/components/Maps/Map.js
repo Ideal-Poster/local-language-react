@@ -22,15 +22,15 @@ const initialState = {
   description: "",
 };
 
-function Map() {
+function Map(props) {
   const [markers, setMarkers] = React.useState([]);
-  const [newMarker, setNewMarker] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
+  const [newMarker, setNewMarker] = React.useState(null);
   const [formData, setFormData] = React.useState(initialState);
 
   useEffect(() => {
     const fetchMarkers = () => {
-      getLocationsByLanguage(setMarkers);
+      getLocationsByLanguage(setMarkers, props.currentLanguage);
     };
     fetchMarkers();
   }, []);

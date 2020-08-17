@@ -22,7 +22,8 @@ class LocationsController < ApplicationController
 
   def filter_by_language
     #stub
-    locations = Language.first.locations
+    locations = Language.find_by(name: request.headers[:currentLanguage]).locations
+
     visits = User.first.visits
     updated_locations = locations.map do |location|
       if visits.any? { |visit| visit[:location_id] == location.id }
