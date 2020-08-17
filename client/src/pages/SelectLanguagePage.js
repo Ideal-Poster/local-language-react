@@ -40,7 +40,9 @@ function SelectLanguagePage(props) {
 
         {selection && (
           <Link to="/language">
-            <button onClick={() => props.setCurrentLanguage(selection)}>
+            <button
+              onClick={() => localStorage.setItem("currentLanguage", selection)}
+            >
               enter
             </button>
           </Link>

@@ -33904,3 +33904,237 @@ Processing by VisitsController#create as HTML
 Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 3712)
 
 
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:07:22 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (1.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "[object Object]"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.1ms | Allocations: 1124)
+
+
+  
+NoMethodError (undefined method `locations' for nil:NilClass):
+  
+app/controllers/locations_controller.rb:25:in `filter_by_language'
+Started GET "/user_languages" for ::1 at 2020-08-17 18:07:26 -0400
+Started GET "/languages" for ::1 at 2020-08-17 18:07:26 -0400
+Processing by UserLanguagesController#index as HTML
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:3:in `index'
+  [1m[36mLanguage Load (1.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:5:in `index'
+  [1m[36mUserLanguage Load (0.9ms)[0m  [1m[34mSELECT "user_languages".* FROM "user_languages" WHERE "user_languages"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 1775)
+
+
+  ↳ app/controllers/user_languages_controller.rb:4:in `map'
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:5:in `block in index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3491)
+
+
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:07:30 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.6ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "Manderine"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:27:in `filter_by_language'
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" INNER JOIN "language_locations" ON "locations"."id" = "language_locations"."location_id" WHERE "language_locations"."language_id" = $1[0m  [["language_id", 1]]
+  ↳ app/controllers/locations_controller.rb:28:in `map'
+  [1m[36mVisit Load (0.4ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/locations_controller.rb:29:in `block in filter_by_language'
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 2.5ms | Allocations: 4449)
+
+
+Started POST "/visits" for ::1 at 2020-08-17 18:07:36 -0400
+Processing by VisitsController#create as HTML
+  Parameters: {"id"=>1, "name"=>"store", "lat"=>40.7244855379529, "lng"=>-73.9997941904297, "description"=>nil, "created_at"=>"2020-08-17T21:57:28.959Z", "updated_at"=>"2020-08-17T21:57:28.959Z", "user_visits"=>[{"id"=>1, "user_id"=>1, "location_id"=>1, "created_at"=>"2020-08-17T21:57:29.019Z", "updated_at"=>"2020-08-17T21:57:29.019Z"}], "visit"=>{"id"=>1, "created_at"=>"2020-08-17T21:57:28.959Z", "updated_at"=>"2020-08-17T21:57:28.959Z"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:4:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[36mVisit Create (0.6ms)[0m  [1m[32mINSERT INTO "visits" ("user_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["location_id", 1], ["created_at", "2020-08-17 22:07:36.121531"], ["updated_at", "2020-08-17 22:07:36.121531"]]
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3685)
+
+
+Started POST "/visits" for ::1 at 2020-08-17 18:08:38 -0400
+Processing by VisitsController#create as HTML
+  Parameters: {"id"=>4, "name"=>"store3", "lat"=>40.7450172757522, "lng"=>-73.9766568890361, "description"=>nil, "created_at"=>"2020-08-17T21:57:28.970Z", "updated_at"=>"2020-08-17T21:57:28.970Z", "user_visits"=>[{"id"=>3, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.028Z", "updated_at"=>"2020-08-17T21:57:29.028Z"}, {"id"=>4, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.032Z", "updated_at"=>"2020-08-17T21:57:29.032Z"}, {"id"=>5, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.039Z", "updated_at"=>"2020-08-17T21:57:29.039Z"}], "visit"=>{"id"=>4, "created_at"=>"2020-08-17T21:57:28.970Z", "updated_at"=>"2020-08-17T21:57:28.970Z"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:4:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:5:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[36mVisit Create (0.5ms)[0m  [1m[32mINSERT INTO "visits" ("user_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["location_id", 4], ["created_at", "2020-08-17 22:08:38.024084"], ["updated_at", "2020-08-17 22:08:38.024084"]]
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 3701)
+
+
+Started POST "/visits" for ::1 at 2020-08-17 18:08:41 -0400
+Processing by VisitsController#create as HTML
+  Parameters: {"id"=>4, "name"=>"store3", "lat"=>40.7450172757522, "lng"=>-73.9766568890361, "description"=>nil, "created_at"=>"2020-08-17T21:57:28.970Z", "updated_at"=>"2020-08-17T21:57:28.970Z", "user_visits"=>[{"id"=>3, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.028Z", "updated_at"=>"2020-08-17T21:57:29.028Z"}, {"id"=>4, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.032Z", "updated_at"=>"2020-08-17T21:57:29.032Z"}, {"id"=>5, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T21:57:29.039Z", "updated_at"=>"2020-08-17T21:57:29.039Z"}, {"id"=>14, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T22:08:38.024Z", "updated_at"=>"2020-08-17T22:08:38.024Z"}, {"id"=>14, "user_id"=>1, "location_id"=>4, "created_at"=>"2020-08-17T22:08:38.024Z", "updated_at"=>"2020-08-17T22:08:38.024Z"}], "visit"=>{"id"=>4, "created_at"=>"2020-08-17T21:57:28.970Z", "updated_at"=>"2020-08-17T21:57:28.970Z"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:4:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/visits_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[36mVisit Create (0.5ms)[0m  [1m[32mINSERT INTO "visits" ("user_id", "location_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["location_id", 4], ["created_at", "2020-08-17 22:08:41.082508"], ["updated_at", "2020-08-17 22:08:41.082508"]]
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/visits_controller.rb:6:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 3717)
+
+
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:08:57 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "[object Object]"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1124)
+
+
+  
+NoMethodError (undefined method `locations' for nil:NilClass):
+  
+app/controllers/locations_controller.rb:25:in `filter_by_language'
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:09:22 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "[object Object]"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms | Allocations: 1123)
+
+
+  
+NoMethodError (undefined method `locations' for nil:NilClass):
+  
+app/controllers/locations_controller.rb:25:in `filter_by_language'
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:11:41 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "[object Object]"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1123)
+
+
+  
+NoMethodError (undefined method `locations' for nil:NilClass):
+  
+app/controllers/locations_controller.rb:25:in `filter_by_language'
+Started GET "/user_languages" for ::1 at 2020-08-17 18:11:47 -0400
+Started GET "/languages" for ::1 at 2020-08-17 18:11:47 -0400
+Processing by LanguagesController#index as HTML
+Processing by UserLanguagesController#index as HTML
+  [1m[36mLanguage Load (0.5ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:5:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1154)
+
+
+  ↳ app/controllers/user_languages_controller.rb:3:in `index'
+  [1m[36mUserLanguage Load (0.3ms)[0m  [1m[34mSELECT "user_languages".* FROM "user_languages" WHERE "user_languages"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/user_languages_controller.rb:4:in `map'
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:5:in `block in index'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 3384)
+
+
+Started GET "/languages" for ::1 at 2020-08-17 18:27:43 -0400
+Started GET "/user_languages" for ::1 at 2020-08-17 18:27:43 -0400
+Processing by UserLanguagesController#index as HTML
+Processing by LanguagesController#index as HTML
+  [1m[36mLanguage Load (1.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:5:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.3ms | Allocations: 1124)
+
+
+  ↳ app/controllers/user_languages_controller.rb:3:in `index'
+  [1m[36mUserLanguage Load (2.0ms)[0m  [1m[34mSELECT "user_languages".* FROM "user_languages" WHERE "user_languages"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/user_languages_controller.rb:4:in `map'
+  [1m[36mLanguage Load (0.9ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:5:in `block in index'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 3691)
+
+
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:27:56 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.6ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "Manderine"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:27:in `filter_by_language'
+  [1m[36mLocation Load (2.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" INNER JOIN "language_locations" ON "locations"."id" = "language_locations"."location_id" WHERE "language_locations"."language_id" = $1[0m  [["language_id", 1]]
+  ↳ app/controllers/locations_controller.rb:28:in `map'
+  [1m[36mVisit Load (1.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/locations_controller.rb:29:in `block in filter_by_language'
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 4.9ms | Allocations: 4838)
+
+
+Started GET "/user_languages" for ::1 at 2020-08-17 18:28:00 -0400
+Started GET "/languages" for ::1 at 2020-08-17 18:28:00 -0400
+Processing by LanguagesController#index as HTML
+Processing by UserLanguagesController#index as HTML
+  [1m[36mLanguage Load (0.7ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 1154)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:3:in `index'
+  [1m[36mUserLanguage Load (0.8ms)[0m  [1m[34mSELECT "user_languages".* FROM "user_languages" WHERE "user_languages"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/user_languages_controller.rb:4:in `map'
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:5:in `block in index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 3439)
+
+
+Started POST "/user_languages" for ::1 at 2020-08-17 18:28:05 -0400
+Processing by UserLanguagesController#create as HTML
+  Parameters: {"user_id"=>1, "language_id"=>2, "user_language"=>{"user_id"=>1, "language_id"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_languages_controller.rb:13:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:13:in `create'
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_languages_controller.rb:13:in `create'
+  [1m[36mUserLanguage Create (1.0ms)[0m  [1m[32mINSERT INTO "user_languages" ("user_id", "language_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["language_id", 2], ["created_at", "2020-08-17 22:28:05.348639"], ["updated_at", "2020-08-17 22:28:05.348639"]]
+  ↳ app/controllers/user_languages_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_languages_controller.rb:13:in `create'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 5647)
+
+
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:28:09 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "Spanish"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:27:in `filter_by_language'
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" INNER JOIN "language_locations" ON "locations"."id" = "language_locations"."location_id" WHERE "language_locations"."language_id" = $1[0m  [["language_id", 2]]
+  ↳ app/controllers/locations_controller.rb:28:in `map'
+  [1m[36mVisit Load (0.6ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/locations_controller.rb:29:in `block in filter_by_language'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 3695)
+
+
+Started GET "/locations_by_language" for ::1 at 2020-08-17 18:28:20 -0400
+Processing by LocationsController#filter_by_language as HTML
+  [1m[36mLanguage Load (1.8ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."name" = $1 LIMIT $2[0m  [["name", "Spanish"], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:25:in `filter_by_language'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:27:in `filter_by_language'
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" INNER JOIN "language_locations" ON "locations"."id" = "language_locations"."location_id" WHERE "language_locations"."language_id" = $1[0m  [["language_id", 2]]
+  ↳ app/controllers/locations_controller.rb:28:in `map'
+  [1m[36mVisit Load (0.5ms)[0m  [1m[34mSELECT "visits".* FROM "visits" WHERE "visits"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/locations_controller.rb:29:in `block in filter_by_language'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 4.5ms | Allocations: 3617)
+
+

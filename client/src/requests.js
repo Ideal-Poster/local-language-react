@@ -24,14 +24,6 @@ export const getLocationsByLanguage = (callback, language) => {
       if (res.statusText == "OK") callback(res.data);
     })
     .catch(console.log());
-
-  // api
-  //   .get("/locations_by_language")
-  //   .then((res) => {
-  //     // console.log(res.data);
-  //     if (res.statusText == "OK") callback(res.data);
-  //   })
-  //   .catch(console.log);
 };
 
 export const postLocation = (object, callback) => {
@@ -62,7 +54,7 @@ export const postVisit = (location, setMarkers, setMarker) => {
     .then((res) => {
       console.log(res.data);
       setMarkers((current) => updatedMarkersState(current, res.data));
-      setMarker(location);
+      // setMarker(location);
     })
     .catch(console.log);
 };

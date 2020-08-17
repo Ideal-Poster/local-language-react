@@ -30,7 +30,7 @@ function Map(props) {
 
   useEffect(() => {
     const fetchMarkers = () => {
-      getLocationsByLanguage(setMarkers, props.currentLanguage);
+      getLocationsByLanguage(setMarkers, localStorage.currentLanguage);
     };
     fetchMarkers();
   }, []);
