@@ -13,8 +13,7 @@ class LocationsController < ApplicationController
 
     if location.save
       LanguageLocation.create(language: language, location: location)
-      visit = Visit.create(user: user, location: location)
-      location.user_visits = [visit]
+      location.user_visits = []
       render json: location, include: :user_visits
     else
       render json: {}

@@ -11,8 +11,8 @@ import "@reach/combobox/styles.css";
 import Search from "./Search";
 import {
   getLocationsByLanguage,
-  getVisitedLocations,
   postLocation,
+  postVisit,
 } from "../../requests";
 import { libraries, mapContainerStyle, center, options } from "./mapConfig";
 import Pin from "./Pin";
@@ -34,6 +34,10 @@ function Map() {
     };
     fetchMarkers();
   }, []);
+
+  const visitLocation = () => {
+    postVisit(selected, setMarkers, setSelected);
+  };
 
   const onMapClick = React.useCallback((event) => {
     setNewMarker({
@@ -115,6 +119,7 @@ function Map() {
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => setSelected(null)}
+            options={{ pixelOffset: new window.google.maps.Size(0, -50) }}
           >
             {selected.id ? (
               <>
@@ -126,6 +131,7 @@ function Map() {
                     you have been here {selected.user_visits.length} time before
                   </p>
                 )}
+                <button onClick={visitLocation}>Visit</button>
               </>
             ) : (
               <>

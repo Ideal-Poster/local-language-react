@@ -1,11 +1,9 @@
 class VisitsController < ApplicationController
-  belongs_to :users
-  belongs_to :locations
-
   def create
     # byebug
-    # user = User.first
-    # Location.find(params[:id])
-    # Visit.create(user)
+    user = User.first
+    location = Location.find(params[:id])
+    visit = Visit.create(user: user, location: location)
+    render json: visit
   end
 end
