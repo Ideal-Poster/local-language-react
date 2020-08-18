@@ -16,6 +16,7 @@ import {
 } from "../../requests";
 import { libraries, mapContainerStyle, center, options } from "./mapConfig";
 import Pin from "./Pin";
+import { Link } from "react-router-dom";
 
 const initialState = {
   name: "",
@@ -83,6 +84,10 @@ function Map(props) {
   return (
     <div>
       {/* <Search /> */}
+
+      <Link to="/language">
+        <h2 id="back"> Back </h2>
+      </Link>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={13}

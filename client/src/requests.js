@@ -83,5 +83,19 @@ export const getLanguages = (callback) => {
 export const addLanguageToUser = (object, callback) => {
   api
     .post("/user_languages", { user_id: 1, language_id: object.id })
-    .then((res) => callback((current) => [...current, res.data]));
+    .then((res) => callback((current) => [...current, res.data]))
+    .catch(console.log);
+};
+
+export const getVisits = (setVisit, setLocationCount, setTopLocations) => {
+  api
+    .get("/visits")
+    .then((res) => {
+      const { visitCount, locationCount, topHangouts } = res.data;
+      console.log(res.data);
+      setVisit(visitCount);
+      setLocationCount(locationCount);
+      setTopLocations(topHangouts);
+    })
+    .catch(console.log);
 };

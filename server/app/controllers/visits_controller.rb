@@ -6,4 +6,32 @@ class VisitsController < ApplicationController
     visit = Visit.create(user: user, location: location)
     render json: visit
   end
+
+  def index
+    # visited_locations = User.first.visits.map do |visit|
+    #   visit.location.user_visit = visit
+    #   visit.location
+    # end
+    # render json: visited_locations, include: :user_visit
+    
+
+    # total count
+    visit_count = User.first.visits.count
+    location_count = User.first.locations.uniq {|location| location.id }.count
+    top_hangouts = User.first.locations
+                    .uniq {|location| location.id }
+                    .sort_by{ |location| location.visits.count }
+                    .reverse[0...10]
+
+    # byebug
+
+    render json: {
+      visitCount: visit_count,
+      locationCount: location_count,
+      topHangouts: top_hangouts
+    }
+
+  end
+
+
 end
