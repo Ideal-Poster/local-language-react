@@ -7,7 +7,8 @@ class LocationsController < ApplicationController
   end
 
   def create
-    language = User.first.languages.first
+    # byebug
+    language = User.first.languages.select { |language| language.name == request.headers['currentLanguage'] }.first
     location = Location.new(location_params)
     user = User.first
 

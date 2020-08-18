@@ -27,6 +27,7 @@ function Map(props) {
   const [selected, setSelected] = React.useState(null);
   const [newMarker, setNewMarker] = React.useState(null);
   const [formData, setFormData] = React.useState(initialState);
+  const [visited, setVisited] = React.useState(initialState);
 
   useEffect(() => {
     const fetchMarkers = () => {
@@ -51,7 +52,11 @@ function Map(props) {
 
   const submitLocation = async (e) => {
     e.preventDefault();
-    await postLocation({ ...newMarker, ...formData }, setMarkers);
+    await postLocation(
+      { ...newMarker, ...formData },
+      setMarkers,
+      localStorage.currentLanguage
+    );
     setNewMarker(null);
     setSelected(null);
   };
@@ -86,23 +91,16 @@ function Map(props) {
         onClick={onMapClick}
         onLoad={onMapLoad}
       >
-        {markers.map((marker) =>
-          marker.user_visits.length > 0 ? (
-            <Pin
-              key={marker.id}
-              imageUrl={"/Asset-8.svg"}
-              marker={marker}
-              setSelected={setSelected}
-            />
-          ) : (
-            <Pin
-              key={marker.id}
-              imageUrl={"/Asset-3.svg"}
-              marker={marker}
-              setSelected={setSelected}
-            />
-          )
-        )}
+        {markers.map((marker) => (
+          <Pin
+            key={marker.id}
+            imageUrl={
+              marker.user_visits.length > 0 ? "/Asset-8.svg" : "/Asset-3.svg"
+            }
+            marker={marker}
+            setSelected={setSelected}
+          />
+        ))}
 
         {newMarker && (
           <Pin
