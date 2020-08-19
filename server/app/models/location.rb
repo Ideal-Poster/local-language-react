@@ -8,4 +8,6 @@ class Location < ApplicationRecord
   has_many :user_languages
   has_many :languages, through: :user_languages
 
+  has_many :language_locations
+  has_many :languages, through: :language_locations
 end

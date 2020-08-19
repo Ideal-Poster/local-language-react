@@ -18,8 +18,8 @@ export const getLocationsByLanguage = (callback, language) => {
   instance
     .get("/locations_by_language")
     .then((res) => {
-      console.log("data", res.data);
-      if (res.statusText == "OK") callback(res.data);
+      // console.log("data", res.data);
+      if (res.statusText === "OK") callback(res.data);
     })
     .catch(console.log());
 };
@@ -39,10 +39,11 @@ export const postLocation = (object, setMarker, language) => {
     .catch(console.log);
 };
 
-export const postVisit = (location, setMarkers, setMarker) => {
+export const postVisit = (location, setMarkers, setSelected) => {
   const updatedMarkersState = (markers, resData) => {
+    console.log(resData);
     markers.map((marker) => {
-      if (marker.id == location.id) {
+      if (marker.id === location.id) {
         marker.user_visits = [...marker.user_visits, resData];
       }
       return marker;
@@ -55,7 +56,7 @@ export const postVisit = (location, setMarkers, setMarker) => {
     .then((res) => {
       // console.log(location);
       setMarkers((current) => updatedMarkersState(current, res.data));
-      setMarker(location);
+      setSelected(null);
     })
     .catch(console.log);
 };
@@ -87,8 +88,19 @@ export const addLanguageToUser = (object, callback) => {
     .catch(console.log);
 };
 
-export const getVisits = (setVisit, setLocationCount, setTopLocations) => {
-  api
+export const getVisits = (
+  setVisit,
+  setLocationCount,
+  setTopLocations,
+  language
+) => {
+  const instance = axios.create({
+    baseURL: "http://localhost:3000/",
+    timeout: 1000,
+    headers: { currentLanguage: language },
+  });
+
+  instance
     .get("/visits")
     .then((res) => {
       const { visitCount, locationCount, topHangouts } = res.data;

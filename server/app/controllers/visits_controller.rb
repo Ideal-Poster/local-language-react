@@ -13,15 +13,18 @@ class VisitsController < ApplicationController
     #   visit.location
     # end
     # render json: visited_locations, include: :user_visit
-    
+    # byebug
+
+    User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.count
 
     # total count
-    visit_count = User.first.visits.count
-    location_count = User.first.locations.uniq {|location| location.id }.count
+    visit_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == "Spanish"} }.count
+    location_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.uniq {|location| location.id }.count
     top_hangouts = User.first.locations
                     .uniq {|location| location.id }
                     .sort_by{ |location| location.visits.count }
                     .reverse[0...10]
+
 
     # byebug
 

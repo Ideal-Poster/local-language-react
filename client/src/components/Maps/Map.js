@@ -1,14 +1,9 @@
 import React, { useEffect } from "react";
-import {
-  useLoadScript,
-  GoogleMap,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { useLoadScript, GoogleMap, InfoWindow } from "@react-google-maps/api";
 // import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
-import Search from "./Search";
+// import Search from "./Search";
 import {
   getLocationsByLanguage,
   postLocation,
@@ -28,7 +23,7 @@ function Map(props) {
   const [selected, setSelected] = React.useState(null);
   const [newMarker, setNewMarker] = React.useState(null);
   const [formData, setFormData] = React.useState(initialState);
-  const [visited, setVisited] = React.useState(initialState);
+  // const [visited, setVisited] = React.useState(initialState);
 
   useEffect(() => {
     const fetchMarkers = () => {
@@ -37,7 +32,8 @@ function Map(props) {
     fetchMarkers();
   }, []);
 
-  const visitLocation = () => {
+  const visitLocation = async () => {
+    const selectedCopy = selected;
     postVisit(selected, setMarkers, setSelected);
   };
 
@@ -85,8 +81,17 @@ function Map(props) {
     <div>
       {/* <Search /> */}
 
-      <Link to="/language">
-        <h2 id="back"> Back </h2>
+      <Link
+        style={{
+          position: "absolute",
+          zIndex: "100",
+          border: "2px solid white",
+          padding: "0px 10px 0px 10px",
+          margin: "10px 0px 0px 10px",
+        }}
+        to="/language"
+      >
+        <h3 id="back"> Back </h3>
       </Link>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
@@ -141,14 +146,20 @@ function Map(props) {
                 <form>
                   <label htmlFor="name">
                     Name <br />
-                    <input onChange={handleChange} type="text" name="name" />
+                    <input
+                      style={{ width: "200px" }}
+                      onChange={handleChange}
+                      type="text"
+                      name="name"
+                    />
                   </label>
                   <br />
                   <label htmlFor="description">
                     Description <br />
                     <input
+                      style={{ height: "50px", width: "200px" }}
                       onChange={handleChange}
-                      type="text"
+                      type="text-area"
                       name="description"
                     />
                   </label>

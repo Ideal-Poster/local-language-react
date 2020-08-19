@@ -1,11 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Map from "./components/Maps/Map";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SelectLanguagePage from "./pages/SelectLanguagePage";
 import LanguagePage from "./pages/LanguagePage";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = React.useState(null);
