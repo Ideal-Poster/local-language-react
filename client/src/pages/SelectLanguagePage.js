@@ -55,7 +55,7 @@ function SelectLanguagePage(props) {
               })}
             </Row>
           </Col>
-          <Col xs={2}>
+          <Col xs={3} offset={1}>
             <div style={{ height: "200px" }}>
               {selection ? (
                 <Link to="/language">

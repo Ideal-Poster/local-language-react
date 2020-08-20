@@ -23,9 +23,10 @@ class VisitsController < ApplicationController
     visit_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.count
     location_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.uniq {|location| location.id }.count
     top_hangouts = User.first.locations
+                    .select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }
                     .uniq {|location| location.id }
                     .sort_by{ |location| location.visits.count }
-                    .reverse[0...10]
+                    .reverse[0...5]
 
 
     # byebug

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLoadScript, GoogleMap, InfoWindow } from "@react-google-maps/api";
-// import { formatRelative } from "date-fns";
+import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
 // import Search from "./Search";
@@ -68,6 +68,20 @@ function Map(props) {
     });
   };
 
+  // const chooseMarkerIcon = (marker) => {
+  //   let vector = ""
+  //   const markersVisitCount = markers.map(mkr => mkr).sort((mkr) => mkr.user_visits.length)
+  //   console.log(markersVisitCount);
+  //   if (marker.user_visits.length > 0) {
+
+  //   } else if (marker.user_visits.length > 0) {
+  //     vector = "/Asset-8.svg"
+  //   } else {
+  //     vector =  "/Asset-3.svg"
+  //   }
+  //   return vector
+  // }
+
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => (mapRef.current = map), []);
 
@@ -108,6 +122,7 @@ function Map(props) {
             key={marker.id}
             imageUrl={
               marker.user_visits.length > 0 ? "/Asset-8.svg" : "/Asset-3.svg"
+              // chooseMarkerIcon(marker)
             }
             marker={marker}
             setSelected={setSelected}
@@ -135,11 +150,21 @@ function Map(props) {
               <>
                 <p>{selected.name}</p>
                 <p>{selected.description}</p>
-                <p>{selected.created_at}</p>
+                <p>
+                  created:{" "}
+                  {formatRelative(
+                    new Date(selected.created_at.split("T")[0]),
+                    new Date()
+                  )}
+                </p>
+
                 {selected.user_visits.length > 0 && (
-                  <p>
-                    you have been here {selected.user_visits.length} time before
-                  </p>
+                  <>
+                    <p>
+                      You have been here {selected.user_visits.length} time
+                      before
+                    </p>
+                  </>
                 )}
                 <button onClick={visitLocation}>Visit</button>
               </>

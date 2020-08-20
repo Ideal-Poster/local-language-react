@@ -10,7 +10,7 @@ class LocationsController < ApplicationController
     # byebug
     language = User.first.languages.select { |language| language.name == request.headers['currentLanguage'] }.first
     location = Location.new(location_params)
-    user = User.first
+    # user = User.first
 
     if location.save
       LanguageLocation.create(language: language, location: location)
@@ -34,7 +34,9 @@ class LocationsController < ApplicationController
         location
       end
     end
-    render json: locations, include: :user_visits
+
+    # byebug
+    render json: updated_locations, include: :user_visits
   end
 
   def filter_by_user
