@@ -10,7 +10,13 @@ class UserLanguagesController < ApplicationController
   def create
     user = User.first
     # byebug
-    user_language = UserLanguage.create(user_id: params[:user_id], language_id: params[:language_id])
-    render json: user_language.language
+    post = JSON.parse request.raw_post
+    if User.first.languages.any? {|language| language.id === post["language_id"] }
+      user_language = {}
+    else
+      user_language = UserLanguage.create(user_id: params[:user_id], language_id: params[:language_id]).language
+    end
+
+    render json: user_language
   end
 end

@@ -37,14 +37,16 @@ function Map(props) {
     postVisit(selected, setMarkers, setSelected);
   };
 
-  const onMapClick = React.useCallback((event) => {
-    setNewMarker({
+  const onMapClick = React.useCallback(async (event) => {
+    const object = {
       lat: event.latLng.lat(),
       lng: event.latLng.lng(),
       time: new Date(),
       user_visits: [],
-    });
-    setSelected(null);
+    };
+    setNewMarker(object);
+    await setSelected(null);
+    setSelected(object);
   }, []);
 
   const submitLocation = async (e) => {

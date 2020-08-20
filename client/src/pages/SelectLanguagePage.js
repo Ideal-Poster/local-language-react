@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import "./LanguagePage.css";
+import "./SelectLanguagePage.css";
 
 function SelectLanguagePage(props) {
   const [userLanguages, setUserLanguages] = React.useState([]);
@@ -29,7 +29,7 @@ function SelectLanguagePage(props) {
           </Col>
         </Row>
         <Row>
-          <Col xs={9}>
+          <Col xs={8}>
             <Row>
               {userLanguages.map((language) => {
                 return selection === language.name ? (
@@ -55,7 +55,7 @@ function SelectLanguagePage(props) {
               })}
             </Row>
           </Col>
-          <Col>
+          <Col xs={2}>
             <div style={{ height: "200px" }}>
               {selection ? (
                 <Link to="/language">
@@ -112,18 +112,19 @@ function SelectLanguagePage(props) {
           </Col>
         </Row>
         <div>
-          <h3>Add Language To profile</h3>
-          {languages.map((language) => (
-            <div>
-              <p style={{ display: "inline-block" }}>{language.name} - </p>
-              <button
-                onClick={() => addLanguageToUser(language, setUserLanguages)}
-              >
-                {" "}
-                Add Language
-              </button>
-            </div>
-          ))}
+          <h3 style={{ marginBottom: "15px" }}>Add Language To profile</h3>
+          <Row>
+            {languages.map((language) => (
+              <Col xs={2}>
+                <p
+                  onClick={() => addLanguageToUser(language, setUserLanguages)}
+                  className="profile-languages"
+                >
+                  {language.name}
+                </p>
+              </Col>
+            ))}
+          </Row>
         </div>
       </Container>
     </div>

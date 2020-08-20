@@ -15,10 +15,12 @@ class VisitsController < ApplicationController
     # render json: visited_locations, include: :user_visit
     # byebug
 
-    User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.count
+
+
+    # User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.count
 
     # total count
-    visit_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == "Spanish"} }.count
+    visit_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.count
     location_count = User.first.locations.select{|location| location.languages.any? {|language| language.name == request.headers["currentLanguage"]} }.uniq {|location| location.id }.count
     top_hangouts = User.first.locations
                     .uniq {|location| location.id }

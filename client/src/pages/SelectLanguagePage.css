@@ -2,3 +2,12 @@
   background: #312b35;
 
 } */
+
+.profile-languages {
+  cursor: pointer;
+  /* color: green; */
+}
+
+.profile-languages:hover {
+  color: grey;
+}

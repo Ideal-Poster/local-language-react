@@ -81,10 +81,15 @@ export const getLanguages = (callback) => {
     .catch(console.log);
 };
 
-export const addLanguageToUser = (object, callback) => {
+export const addLanguageToUser = (object, setUserLanguages) => {
+  console.log(object);
   api
     .post("/user_languages", { user_id: 1, language_id: object.id })
-    .then((res) => callback((current) => [...current, res.data]))
+    .then((res) => {
+      if (res.data.id)
+        return setUserLanguages((current) => [...current, res.data]);
+      console.log(res);
+    })
     .catch(console.log);
 };
 
